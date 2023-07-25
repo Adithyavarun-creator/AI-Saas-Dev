@@ -1,12 +1,11 @@
-//import { Icon } from "lucide-react";//
-import { FaAtlassian } from 'react-icons/fa'
+import { ChevronRightCircle } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
 interface HeadingProps {
     title: string;
     description: string;
-    icon: string;
+    icon: any;
     iconColor?: string;
     bgColor?: string;
 }
@@ -14,7 +13,7 @@ interface HeadingProps {
 export const Heading = ({
     title,
     description,
-    icon: Icon,
+    icon: ChevronRightCircle,
     iconColor,
     bgColor,
 }: HeadingProps) => {
@@ -22,7 +21,7 @@ export const Heading = ({
         <>
             <div className="px-4 lg:px-8 flex items-center gap-x-3 mb-8">
                 <div className={cn("p-2 w-fit rounded-md", bgColor)}>
-                    <FaAtlassian className={cn("w-10 h-10", iconColor)} />
+                    <ChevronRightCircle className={cn("w-10 h-10", iconColor)} />
                 </div>
                 <div>
                     <h2 className="text-3xl font-bold">{title}</h2>
